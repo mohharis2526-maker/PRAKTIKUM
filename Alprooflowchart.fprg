@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="tugas-praktikum1"/>
+        <attribute name="authors" value="PC"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-09-29 07:24:40 AM"/>
+        <attribute name="created" value="UEM7REVTS1RPUC1IME8xSFQ4OzIwMjYtMDktMjk7MDY6Mzc6MDAgQU07MjQ2NQ=="/>
+        <attribute name="edited" value="UEM7REVTS1RPUC1IME8xSFQ4OzIwMjYtMDktMjk7MDc6MjQ6NDAgQU07MTsyNTc0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="saldoUdin, totalBuku, totalPulpen, totalFlashdisk, subtotal, promo, hargaSetelahPromo, ppn, totalBayar, kembalian" type="Real" array="False" size=""/>
+            <assign variable="saldoUdin" expression="100000*2"/>
+            <output expression="&quot;Saldo Udin sekarang adalah : &quot; &amp; saldoUdin" newline="True"/>
+            <assign variable="totalBuku" expression="3 * 25000"/>
+            <assign variable="totalPulpen" expression="2 * 8000"/>
+            <assign variable="totalFlashdisk" expression="1 * 75000"/>
+            <assign variable="subtotal" expression="totalBuku + totalPulpen + totalFlashdisk"/>
+            <assign variable="promo" expression="subtotal * 0.10"/>
+            <assign variable="hargaSetelahPromo" expression="subtotal - promo"/>
+            <assign variable="ppn" expression="hargaSetelahPromo * 0.11"/>
+            <assign variable="totalBayar" expression="hargaSetelahPromo + ppn"/>
+            <assign variable="kembalian" expression="saldoUdin - totalBayar"/>
+            <output expression="&quot;Total harga 3 buku : &quot; &amp; totalBuku &amp;ToChar(13)&amp;&#13;&#10;&quot;Total harga 2 pulpen : &quot; &amp; totalPulpen &amp;ToChar(13)&amp;&#13;&#10;&quot;Total harga 1 flashdisk : &quot; &amp; totalFlashdisk &amp;ToChar(13)&amp;&#13;&#10;&quot;Total harga seluruh barang sebelum promo : &quot; &amp; subtotal &amp;ToChar(13)&amp;&#13;&#10;&quot;Mendapat promo 10% : &quot; &amp; promo &amp;ToChar(13)&amp;&#13;&#10;&quot;Total harga setelah mendapat promo : &quot; &amp; hargaSetelahPromo &amp;ToChar(13)&amp;&#13;&#10;&quot;Biaya Admin/PPN sebesar 11% : &quot; &amp; ppn &amp;ToChar(13)&amp;&#13;&#10;&quot;Total yang Harus di bayar Udin : &quot; &amp; totalBayar &amp;ToChar(13) &amp;&#13;&#10;&quot;Total uang Udin setelah membeli barang-barang : &quot; &amp; kembalian" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
